@@ -1,6 +1,8 @@
 ---
 - hosts: all
-
+  vars:
+      user: "app"
+      sudoer: "deployer"
   pre_tasks:
     - name: Update apt cache.
       apt: update_cache=yes cache_valid_time=600
